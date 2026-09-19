@@ -1,13 +1,13 @@
 import os
 from flask import Flask, request, jsonify
-import google.generativeai as genai
+from google import genai
 
 app = Flask(__name__)
 
 # Εδώ συνδέουμε το API Key που πήρες από το Google AI Studio
 GOOGLE_API_KEY = os.environ.get("GEMINI_API_KEY")
-genai.configure(api_key=GOOGLE_API_KEY)
-
+client =
+genai.Client(api_key=GOOGLE_API_KEY)
 # Επιλέγουμε το δωρεάν και γρήγορο μοντέλο της Google
 model = genai.GenerativeModel('gemini-1.5-flash')
 
@@ -31,9 +31,8 @@ def jarvis_brain():
     """
 
     # Το Gemini απαντάει και ψάχνει στο Google αν χρειαστεί πληροφορία!
-    response = model.generate_content(prompt)
-    ai_reply = response.text
-
+    response = 
+    client.models.generate_content(model="gemini-2.5-flash",contents=promt)ai_ reply = response.text
     # Φιλτράρισμα εντολών για τα μοτέρ του ESP32
     command = "STOP"
     text_lower = user_voice_text.lower()
