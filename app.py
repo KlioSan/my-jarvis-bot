@@ -5,7 +5,7 @@ import google.generativeai as genai
 app = Flask(__name__)
 
 # Εδώ συνδέουμε το API Key που πήρες από το Google AI Studio
-GOOGLE_API_KEY = os.environ.get("GEMINI_API_KEY", "ΕΔΩ_ΒΑΖΕΙΣ_ΤΟ_ΔΙΚΟ_ΣΟΥ_API_KEY")
+GOOGLE_API_KEY = os.environ.get("GEMINI_API_KEY")
 genai.configure(api_key=GOOGLE_API_KEY)
 
 # Επιλέγουμε το δωρεάν και γρήγορο μοντέλο της Google
