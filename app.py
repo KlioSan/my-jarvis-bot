@@ -17,7 +17,7 @@ def jarvis_brain():
     user_voice_text = data.get("text", "") # Εδώ έρχεται το κείμενο από τη φωνή σου
     
     if not user_voice_text:
-        return jsonify({"reply": "Δεν σε άκουσα καλά.", "command": "STOP"})
+        return jsonify({"reply": "Hello jarvis is working", "command": "STOP"})
 
     print(f"Χρήστης: {user_voice_text}")
 
